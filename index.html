@@ -295,7 +295,7 @@
         function GenerarPDFE(){
             var cantidad=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]    
             //alert("Medicamentos mas vendidos")
-            fetch(`https://proyecto2-ipc1-202004765.herokuapp.com/Recetas`, {
+            fetch(`http://54.214.118.211:3000/Recetas`, {
                 method: 'GET',
                 headers:{
                     'Content-Type': 'application/json',
@@ -634,7 +634,7 @@
         }
         function GenerarPDFD(){
             var ar=[]
-            fetch(`https://proyecto2-ipc1-202004765.herokuapp.com/Citas/top`, {
+            fetch(`http://54.214.118.211:3000/Citas/top`, {
                 method: 'GET',
                 headers:{
                     'Content-Type': 'application/json',
@@ -656,7 +656,7 @@
         }
         function GenerarPDFM(){
             var ar=[]
-            fetch(`https://proyecto2-ipc1-202004765.herokuapp.com/Stonks`, {
+            fetch(`http://54.214.118.211:3000/Stonks`, {
                 method: 'GET',
                 headers:{
                     'Content-Type': 'application/json',

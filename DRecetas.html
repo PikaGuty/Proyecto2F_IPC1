@@ -318,7 +318,7 @@
                     "Padecimiento":document.querySelector('#Padecimiento').value
                 }
                 console.log(objetoo)
-                fetch('https://proyecto2-ipc1-202004765.herokuapp.com/Recetas',{
+                fetch('http://54.214.118.211:3000/Recetas',{
                     method: 'POST',
                     body: JSON.stringify(objetoo),
                     headers:{

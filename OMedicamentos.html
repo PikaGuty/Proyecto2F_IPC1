@@ -343,7 +343,7 @@
         var tabla = document.querySelector('#detalles')
         var cadena = ''
 
-        fetch('https://proyecto2-ipc1-202004765.herokuapp.com/Medicamentos', {
+        fetch('http://54.214.118.211:3000/Medicamentos', {
         method: 'GET',
         headers:{
             'Content-Type': 'application/json',
@@ -399,7 +399,7 @@
                             //alert(objeto)
                             console.log(objeto)
 
-                            fetch('https://proyecto2-ipc1-202004765.herokuapp.com/Medicamentos',{
+                            fetch('http://54.214.118.211:3000/Medicamentos',{
                                 method: 'POST',
                                 body: JSON.stringify(objeto),
                                 headers:{
@@ -445,7 +445,7 @@ function eliminar(boton){
     var usuario = boton.value
     var opcion = confirm("Deseas eliminar");
     if (opcion == true) {
-        fetch(`https://proyecto2-ipc1-202004765.herokuapp.com/Medicamentos/${usuario}`, {
+        fetch(`http://54.214.118.211:3000/Medicamentos/${usuario}`, {
             method: 'DELETE',
             headers:{
                 'Content-Type': 'application/json',

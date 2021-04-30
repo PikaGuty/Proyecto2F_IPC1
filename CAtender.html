@@ -261,7 +261,7 @@
         var cadena = ''
         var cadena2 = ''
 
-        fetch('https://proyecto2-ipc1-202004765.herokuapp.com/Citas', {
+        fetch('http://54.214.118.211:3000/Citas', {
         method: 'GET',
         headers:{
             'Content-Type': 'application/json',
@@ -294,7 +294,7 @@
         var usuario = boton.value
         var opcion = confirm("Deseas completar la cita");
         if (opcion == true) {
-            fetch(`https://proyecto2-ipc1-202004765.herokuapp.com/Citas/${usuario}/2`, {
+            fetch(`http://54.214.118.211:3000/Citas/${usuario}/2`, {
             method: 'GET',
             headers:{
                 'Content-Type': 'application/json',
@@ -319,7 +319,7 @@
                         
                 console.log(objeto)
 
-                fetch(`https://proyecto2-ipc1-202004765.herokuapp.com/Citas/${usuario}/2`,{
+                fetch(`http://54.214.118.211:3000/Citas/${usuario}/2`,{
                     method: 'PUT',
                     body: JSON.stringify(objeto),
                     headers:{

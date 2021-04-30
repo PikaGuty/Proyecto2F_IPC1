@@ -302,7 +302,7 @@ a {
 <script>
 function ObtenerDatos(){ 
     var usuario = sessionStorage.buscar          
-    fetch(`https://proyecto2-ipc1-202004765.herokuapp.com/Personas/${usuario}`, {
+    fetch(`http://54.214.118.211:3000/Personas/${usuario}`, {
         method: 'GET',
         headers:{
            'Content-Type': 'application/json',

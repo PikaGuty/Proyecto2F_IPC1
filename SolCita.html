@@ -286,7 +286,7 @@
             var nombre_us = sessionStorage.buscar
             
             
-            fetch(`https://proyecto2-ipc1-202004765.herokuapp.com/Citas/${nombre_us}`, {
+            fetch(`http://54.214.118.211:3000/Citas/${nombre_us}`, {
             method: 'GET',
             headers:{
                 'Content-Type': 'application/json',
@@ -305,7 +305,7 @@
                             
                             console.log(objeto)
 
-                            fetch('https://proyecto2-ipc1-202004765.herokuapp.com/Citas',{
+                            fetch('http://54.214.118.211:3000/Citas',{
                                 method: 'POST',
                                 body: JSON.stringify(objeto),
                                 headers:{
@@ -350,7 +350,7 @@
                             
                             console.log(objeto)
 
-                            fetch('https://proyecto2-ipc1-202004765.herokuapp.com/Citas',{
+                            fetch('http://54.214.118.211:3000/Citas',{
                                 method: 'POST',
                                 body: JSON.stringify(objeto),
                                 headers:{

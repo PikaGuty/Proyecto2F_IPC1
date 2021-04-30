@@ -242,7 +242,7 @@ a {
             if(nombre=="admin"&&contraseña=="1234"){
                 window.location.href = "index.html";
             }else{
-                fetch(`https://proyecto2-ipc1-202004765.herokuapp.com/Personas/${nombre}`, {
+                fetch(`http://54.214.118.211:3000/Personas/${nombre}`, {
                 method: 'GET',
                 headers:{
                     'Content-Type': 'application/json',

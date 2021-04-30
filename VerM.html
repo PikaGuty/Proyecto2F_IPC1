@@ -345,7 +345,7 @@ function ObtenerDatos(){
                     }
                     console.log(objeto)
                     
-                    fetch(`https://proyecto2-ipc1-202004765.herokuapp.com/Medicamentos/${usuario}`,{
+                    fetch(`http://54.214.118.211:3000/Medicamentos/${usuario}`,{
                         method: 'PUT',
                         body: JSON.stringify(objeto),
                         headers:{
