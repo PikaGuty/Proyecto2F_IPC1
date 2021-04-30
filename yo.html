@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/x-icon" href="p.ico" />
+    <meta charset="utf-8">
+    <!--  This file has been downloaded from bootdey.com    @bootdey on twitter -->
+    <!--  All snippets are MIT license http://bootdey.com/license -->
+    <title>candidate resume - Bootdey.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=ddqni6sam8qJhY7kZzUC7QyZ9Gs_MMVLFAVEF4A7HZnXpquOE8vVLTHZDs5GMmZ7R5CDY-_ZJHTxQz5jS2uUbbfBMI6beJDe7swzX6Jjxy6npbmn9yyjvRp4_8txqwmd3kH5jYHv5l3tvAfuF1-UrQ" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly93d3cuYm9vdGRleS5jb20vc25pcHBldHMvZXhlY3V0ZV9kb3dubG9hZC9talJ5cVZ5X3V3eUU5UXR6WjFxaGJMaWstNF9kem5PVlNxelN6YzlKSFBn"/><style type="text/css">
+    	/* My Resume */
+.profile {
+    margin-bottom: 25px;
+}
+.profile .jobster-user-info {
+    display: inline-block;
+    width: 100%;
+}
+.profile .jobster-user-info .profile-avatar {
+    position: relative;
+    height: 115px;
+    width: 115px;
+    border-radius: 100%;
+    display: inline-block;
+}
+.profile .jobster-user-info .profile-avatar img {
+    border-radius: 100%;
+}
+.profile .jobster-user-info .profile-avatar i {
+    font-size: 16px;
+    color: #21c87a;
+    position: absolute;
+    background: #ffffff;
+    border-radius: 100%;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    bottom: 20px;
+    right: -5px;
+}
+
+.about-candidate {
+    padding: 25px 0px;
+}
+.about-candidate .candidate-info {
+    margin-bottom: 20px;
+}
+
+.resume-experience {
+    padding-left: 10px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    position: relative;
+    padding-right: 50px;
+    background: #f6f6f6;
+}
+.btn-n {
+    background-color: #F5590B;
+    width: 150px;
+    color: #fff;
+    border-radius: 2px
+}
+
+.btn-n:hover {
+    background-color: #000;
+    cursor: pointer
+}
+.resume-experience:before {
+    position: absolute;
+    left: -40%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #f6f6f6;
+    content: "";
+    z-index: -1;
+    top: 0;
+}
+.resume-experience .jobster-candidate-timeline .jobster-timeline-item .jobster-timeline-cricle {
+    border-color: #f6f6f6;
+}
+
+.user-dashboard-info-box .select2-container--default .select2-selection--single .select2-selection__rendered {
+    font-weight: bold;
+    color: #626262;
+}
+
+@media (max-width: 1199px) {
+    .secondary-menu ul li a {
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 991px) {
+    .resume-experience {
+        padding-left: 15px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-right: 15px;
+    }
+    .resume-experience:before {
+        content: none;
+    }
+    .secondary-menu ul li {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 575px) {
+    .secondary-menu ul li a {
+        padding: 4px 8px;
+    }
+}
+
+/*****************************
+    Progress Bar
+*****************************/
+.progress {
+    position: relative;
+    overflow: inherit;
+    height: 3px;
+    margin: 40px 0px 15px;
+    width: 100%;
+    display: inline-block;
+}
+.progress .progress-bar {
+    height: 3px;
+    background: #21c87a;
+}
+.progress .progress-bar-title {
+    position: absolute;
+    left: 0;
+    top: -20px;
+    color: #212529;
+    font-size: 14px;
+    font-weight: 600;
+}
+.progress .progress-bar-number {
+    position: absolute;
+    right: 0;
+    color: #646f79;
+    top: -20px;
+}
+
+
+/* Jobster Candidate */
+.jobster-candidate-timeline {
+    position: relative;
+}
+.jobster-candidate-timeline:before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    width: 2px;
+    top: 5px;
+    bottom: 5px;
+    height: calc(100% - 5px);
+    background-color: #eeeeee;
+}
+
+.jobster-candidate-timeline .jobster-timeline-item {
+    display: table;
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.jobster-candidate-timeline .jobster-timeline-item .jobster-timeline-cricle {
+    border-radius: 50%;
+    border: 12px solid white;
+    z-index: 1;
+    top: 5px;
+    left: 9px;
+    position: absolute;
+}
+.jobster-candidate-timeline .jobster-timeline-item .jobster-timeline-cricle:before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    width: 20px;
+    top: -1px;
+    bottom: 5px;
+    height: 2px;
+    background-color: #eeeeee;
+}
+.jobster-candidate-timeline .jobster-timeline-item .jobster-timeline-cricle > i {
+    font-size: 15px;
+    top: -8px;
+    left: -7px;
+    position: absolute;
+    color: #21c87a;
+}
+
+.jobster-candidate-timeline .jobster-timeline-item .jobster-timeline-info {
+    display: table-cell;
+    vertical-align: top;
+    padding: 5px 0 0 70px;
+}
+.jobster-candidate-timeline .jobster-timeline-item .jobster-timeline-info h6 {
+    color: #21c87a;
+    margin: 5px 0 0px;
+}
+.jobster-candidate-timeline .jobster-timeline-item .jobster-timeline-info span {
+    color: #212529;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.jobster-candidate-timeline span.jobster-timeline-time {
+    color: #646f79 !important;
+}
+
+.jobster-candidate-timeline .jobster-timeline-icon {
+    border: 2px solid #eeeeee;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    line-height: 42px;
+    text-align: center;
+    background: #ffffff;
+    position: relative;
+    margin-bottom: 20px;
+}
+.jobster-candidate-timeline .jobster-timeline-icon i {
+    font-size: 16px;
+    color: #212529;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 16px;
+}
+
+    </style>
+</head>
+<body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+
+<div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-9">
+          <div class="row align-items-center">
+            <div class="col-lg-5">
+              <div class="resume-base bg-primary user-dashboard-info-box p-4">
+                <div class="profile">
+                  <div class="jobster-user-info">
+                    <div class="profile-avatar">
+                      <img class="img-fluid " src="foto2.png" alt="">
+                    </div>
+                    <div class="profile-avatar-info mt-3">
+                      <h5 class="text-white">Javier Alejandro Gutierrez de León</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-candidate border-top">
+                  
+                  <div class="candidate-info">
+                    <h6 class="text-white">Email:</h6>
+                    <p class="text-white">javgut2001@gmail.com</p>
+                  </div>
+                  <div class="candidate-info">
+                    <h6 class="text-white">Teléfono:</h6>
+                    <p class="text-white">+502 4254-3549</p>
+                  </div>
+                  <div class="candidate-info">
+                    <h6 class="text-white">Fecha de nacimiento:</h6>
+                    <p class="text-white">14-03-2001</p>
+                  </div>
+                  <div class="candidate-info">
+                    <h6 class="text-white">Genero:</h6>
+                    <p class="text-white">Masculino</p>
+                  </div>
+                </div>
+                <div class="mt-0">
+                  <h5 class="text-white">Lenguajes de programación:</h5>
+                  <div class="progress bg-dark">
+                    <div class="progress-bar bg-white" role="progressbar" style="width:70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar-title text-white">Java</div>
+                      <span class="progress-bar-number text-white">70%</span>
+                    </div>
+                  </div>
+                  <div class="progress bg-dark">
+                    <div class="progress-bar bg-white" role="progressbar" style="width:40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar-title text-white">C#</div>
+                      <span class="progress-bar-number text-white">40%</span>
+                    </div>
+                  </div>
+                  <div class="progress bg-dark">
+                    <div class="progress-bar bg-white" role="progressbar" style="width:40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar-title text-white">JavaScript</div>
+                      <span class="progress-bar-number text-white">40%</span>
+                    </div>
+                  </div>
+                  <div class="progress bg-dark">
+                    <div class="progress-bar bg-white" role="progressbar" style="width:55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar-title text-white">MikroPascal</div>
+                      <span class="progress-bar-number text-white">55%</span>
+                    </div>
+                  </div>
+                  <div class="progress bg-dark">
+                    <div class="progress-bar bg-white" role="progressbar" style="width:75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar-title text-white">Assembler</div>
+                      <span class="progress-bar-number text-white">75%</span>
+                    </div>
+                  </div>
+                  <div class="progress bg-dark">
+                    <div class="progress-bar bg-white" role="progressbar" style="width:80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar-title text-white">Ladder</div>
+                      <span class="progress-bar-number text-white">80%</span>
+                    </div>
+                  </div>
+                  <div class="progress bg-dark">
+                    <div class="progress-bar bg-white" role="progressbar" style="width:75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar-title text-white">HTML/CSS</div>
+                      <span class="progress-bar-number text-white">75%</span>
+                    </div>
+                  </div>
+                  <div class="progress bg-dark mb-md-0">
+                    <div class="progress-bar bg-white" role="progressbar" style="width:60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar-title text-white">PHP</div>
+                      <span class="progress-bar-number text-white">60%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="resume-experience">
+                <div class="timeline-box">
+                  <h5 class="resume-experience-title">Educación:</h5>
+                  <div class="jobster-candidate-timeline">
+                    <div class="jobster-timeline-item">
+                      <div class="jobster-timeline-cricle">
+                        <i class="far fa-circle"></i>
+                      </div>
+                      <div class="jobster-timeline-info">
+                        <div class="dashboard-timeline-info">
+                          <span class="jobster-timeline-time">2005 - 2010</span>
+                          <h6 class="mb-2">Preprimaria a 3ero primaria</h6>
+                          <span>- Colegio Loyola</span>
+                          <p class="mt-2"></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="jobster-timeline-item mb-0">
+                      <div class="jobster-timeline-cricle">
+                        <i class="far fa-circle"></i>
+                      </div>
+                      <div class="jobster-timeline-info">
+                        <div class="dashboard-timeline-info">
+                          <span class="jobster-timeline-time">2011 - 2015</span>
+                          <h6 class="mb-2">4to primaria a 2do Básico</h6>
+                          <span>- Colegio Mariano y Rafael Castillo Córdova</span>
+                          <p class="mt-2"></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="jobster-timeline-item">
+                      <div class="jobster-timeline-cricle">
+                        <i class="far fa-circle"></i>
+                      </div>
+                      <div class="jobster-timeline-info">
+                        <div class="dashboard-timeline-info">
+                          <span class="jobster-timeline-time">2016 - 2019</span>
+                          <h6 class="mb-2">3ero básico a 6to Bachillerato Industrial y Perito en Electrónica</h6>
+                          <span>- Instituto Tecnológico de Computación</span>
+                          <p class="mt-2"></p>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="jobster-timeline-item">
+                      <div class="jobster-timeline-cricle">
+                        <i class="far fa-circle"></i>
+                      </div>
+                      <div class="jobster-timeline-info">
+                        <div class="dashboard-timeline-info">
+                          <span class="jobster-timeline-time">2020 - presente</span>
+                          <h6 class="mb-2">Ingeniería en Ciencias y Sistemas</h6>
+                          <span>- Universidad de San Carlos de Guatemala</span>
+                          <p class="mt-2"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline-box mt-4">
+                  <h5 class="resume-experience-title">Experiencia:</h5>
+                  <div class="jobster-candidate-timeline">
+                    <div class="jobster-timeline-item">
+                      <div class="jobster-timeline-cricle">
+                        <i class="far fa-circle"></i>
+                      </div>
+                      <div class="jobster-timeline-info">
+                        <div class="dashboard-timeline-info">
+                          <span class="jobster-timeline-time">11-2018 to 12-2018</span>
+                          <h6 class="mb-2">Soporte Técnico</h6>
+                          <span>- Registro Nacional de las Personas (RENAP)</span>
+                          <p class="mt-2"></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="jobster-timeline-item mb-0">
+                      <div class="jobster-timeline-cricle">
+                        <i class="far fa-circle"></i>
+                      </div>
+                      <div class="jobster-timeline-info">
+                        <div class="dashboard-timeline-info">
+                          <span class="jobster-timeline-time">08-2018 to 10-2018</span>
+                          <h6 class="mb-2">Soporte Técnico</h6>
+                          <span>- Banco Industrial</span>
+                          <p class="mt-2"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-box mt-4">
+                  <h5 class="resume-experience-title">Reconocimientos:</h5>
+                  <div class="jobster-candidate-timeline">
+                    
+                    <div class="jobster-timeline-item">
+                      <div class="jobster-timeline-cricle">
+                        <i class="far fa-circle"></i>
+                      </div>
+                      <div class="jobster-timeline-info">
+                        <div class="dashboard-timeline-info">
+                          <span class="jobster-timeline-time">2019</span>
+                          <h6 class="mb-2">Galardón de la Riva</h6>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="jobster-timeline-item mb-0">
+                      <div class="jobster-timeline-cricle">
+                        <i class="far fa-circle"></i>
+                      </div>
+                      <div class="jobster-timeline-info">
+                        <div class="dashboard-timeline-info">
+                          <span class="jobster-timeline-time">2019</span>
+                          <h6 class="mb-2">2do Lugar Rama de Robótica e Informática - CONCYT -</h6>
+                          <span>-</span>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="jobster-timeline-item mb-0">
+                      <div class="jobster-timeline-cricle">
+                        <i class="far fa-circle"></i>
+                      </div>
+                      <div class="jobster-timeline-info">
+                        <div class="dashboard-timeline-info">
+                          <span class="jobster-timeline-time">2019</span>
+                          <h6 class="mb-2">3er Lugar Rama de Ciencias de la Salud - CONCYT -</h6>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="jobster-timeline-item mb-0">
+                      <div class="jobster-timeline-cricle">
+                        <i class="far fa-circle"></i>
+                      </div>
+                      <div class="jobster-timeline-info">
+                        <div class="dashboard-timeline-info">
+                          <span class="jobster-timeline-time">2019</span>
+                          <h6 class="mb-2">1er lugar Aplicaciones Móviles - Montano -</h6>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="jobster-timeline-item mb-0">
+                      <div class="jobster-timeline-cricle">
+                        <i class="far fa-circle"></i>
+                      </div>
+                      <div class="jobster-timeline-info">
+                        <div class="dashboard-timeline-info">
+                          <span class="jobster-timeline-time">2018</span>
+                          <h6 class="mb-2">2do lugar Electrónica y Mecatrónica - Juventud - </h6>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="jobster-timeline-item mb-0">
+                      <div class="jobster-timeline-cricle">
+                        <i class="far fa-circle"></i>
+                      </div>
+                      <div class="jobster-timeline-info">
+                        <div class="dashboard-timeline-info">
+                          <span class="jobster-timeline-time">2018</span>
+                          <h6 class="mb-2">1er lugar MakerExpo - IEEE - </h6>
+                        </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row mb-3 px-3 justify-content-center mt-4 mb-5 border-line"> <button type="submit" onclick="location.href='Inicio.html'" class="btn btn-n text-center">Regresar</button> </div>
+
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	
+</script>
+</body>
+</html>

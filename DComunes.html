@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>html2pdf Test - Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <style>@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+        body, h1, h2, h3, h4, h5, h6{
+          font-family: 'Bree Serif', serif;
+                    }
+    </style>
+    <style>@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+      body, h1, h2, h3, h4, h5, h6{
+        font-family: 'Bree Serif', serif;
+                    }
+  </style>
+  </head>
+
+  <body>
+    <!-- Button to generate PDF. -->
+
+
+    <!-- Div to capture. -->
+    <div id="root">
+      <div class="container" id="all">
+      <div class="row">
+            
+    <div class="col-xs-6">
+      <!--<h1><a href=" "><img alt="" src="image/logo.png" /></a></h1>-->
+    </div>
+    <br><br>
+    <h1 style="text-align: center;">TOP 3 DOCTORES CON MAS CITAS</h1> 
+    <br><br><br>
+<table class="table table-bordered">
+  
+  <tbody>
+    <tr>
+      <td style="text-align: center;"><h1 style="text-align: center;">1ER</h1></td>
+      <td class=" text-right " id="pc"><h2 style="text-align: center;" id="cp">FACTURA</h2> </td>
+            
+            <script>
+                var objeto = sessionStorage.fff.split(",")
+                
+                fetch(`https://proyecto2-ipc1-202004765.herokuapp.com/Personas/${objeto[0]}`, {
+                method: 'GET',
+                headers:{
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',}})
+                .then(res => res.json())
+                .catch(err => {
+                    console.error('Error:', err)
+                    alert("Ocurrio un error, ver la consola")
+                })
+                .then(response =>{
+                    console.log(response)
+                    document.getElementById('cp').innerHTML= response.Nombre+" "+response.Apellido;
+                })
+            </script>
+      
+    </tr>
+    <tr>
+      <td style="text-align: center;"><h1 style="text-align: center;">2DO</h1></td>
+      <td class=" text-right " id="pc"><h2 style="text-align: center;" id="cs">FACTURA</h2> </td>
+            
+      <script>
+        var objeto = sessionStorage.fff.split(",")
+        
+        fetch(`https://proyecto2-ipc1-202004765.herokuapp.com/Personas/${objeto[1]}`, {
+        method: 'GET',
+        headers:{
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',}})
+        .then(res => res.json())
+        .catch(err => {
+            console.error('Error:', err)
+            alert("Ocurrio un error, ver la consola")
+        })
+        .then(response =>{
+            console.log(response)
+            document.getElementById('cs').innerHTML= response.Nombre+" "+response.Apellido;
+        })
+    </script>
+      
+    </tr>
+        <tr>
+      <td style="text-align: center;"><h1 style="text-align: center;" >3ER</h1></td>
+      <td class=" text-right " id="pc"><h2 style="text-align: center;" id="ct">FACTURA</h2> </td>
+            
+      <script>
+        var objeto = sessionStorage.fff.split(",")
+        
+        fetch(`https://proyecto2-ipc1-202004765.herokuapp.com/Personas/${objeto[2]}`, {
+        method: 'GET',
+        headers:{
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',}})
+        .then(res => res.json())
+        .catch(err => {
+            console.error('Error:', err)
+            alert("Ocurrio un error, ver la consola")
+        })
+        .then(response =>{
+            console.log(response)
+            document.getElementById('ct').innerHTML= response.Nombre+" "+response.Apellido;
+        })
+    </script>
+      
+    </tr>
+    
+  
+  </tbody>
+</table>
+
+    
+</div>
+</div>
+    </div>
+
+    <!-- Include html2pdf bundle. -->
+    <script src="html2pdf.bundle.js"></script>
+
+    <script>
+      var element = document.getElementById('root');
+      setTimeout(() => {
+        html2pdf().from(element).set({
+          margin: .4,
+          filename: 'Top_Medicos.pdf',
+          html2canvas: { scale: 2 },
+          jsPDF: {orientation: 'landscape', unit: 'in', format: 'legal', compressPDF: true}
+        }).save();
+       }, 5000);
+        setTimeout(() => {
+          console.log("1 Segundo esperado")
+          window.location.href = "index.html";
+        }, 10000);
+        
+    </script>
+  </body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	    <div class="container" id="all">
+			<div class="row">
+            
+		<div class="col-xs-6">
+			<!--<h1><a href=" "><img alt="" src="image/logo.png" /></a></h1>-->
+		</div>
+		<div class="col-xs-6 text-right">
+							<div class="panel panel-default">
+							<div class="panel-heading">
+									<h4>NIT : 
+										<a href="#">1792</a>
+									</h4>
+									<h4>AUTORIZACI&Oacute;N : 
+										<a href="#">666</a>
+									</h4>
+							</div>
+							<div class="panel-body">
+								<h4>FACTURA : 
+										<a href="#" id="fac">N&uacute;mero de FACTURA</a>
+                                        <script>
+                                            var objeto = sessionStorage.asd.split(",")
+                                            //id factura alert(objeto[0])
+                                            var facc = objeto[0]
+                                            document.getElementById('fac').innerHTML= facc;
+                                        </script>
+								</h4>
+							</div>
+						</div>
+					</div>
+ 
+			<hr />
+ 
+			
+				<h1 style="text-align: center;">FACTURA</h1> 
+			
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4>Guatemala, <a href="#" id="fech"></a>
+                                        <script>
+                                            var objeto = sessionStorage.asd.split(",")
+                                            //id factura alert(objeto[0])
+                                            var facc = objeto[1]
+                                            document.getElementById('fech').innerHTML= facc;
+                                        </script>
+									</h4>
+								</div>
+						<div class="panel-body">
+						
+							
+								<h4>Paciente :  
+									<a href="#" id="cliente"></a>
+                                        <script>
+                                            var objeto = sessionStorage.asd.split(",")
+                                            //id factura alert(objeto[0])
+                                            var facc = objeto[2]
+                                            document.getElementById('cliente').innerHTML= facc;
+                                        </script>
+								</h4>
+					
+						</div>
+						</div>
+					</div>
+					
+				</div>
+<pre></pre>
+<table class="table table-bordered">
+	<thead >
+		<tr >
+			<th style="text-align: center;">
+				<h4>Cantidad</h4>
+			</th>
+			<th style="text-align: center;">
+				<h4>Concepto</h4>
+			</th>
+			<th style="text-align: center;">
+				<h4>Total</h4>
+			</th>
+			
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="text-align: center;">1</td>
+			<td><a href="#"> Consulta Médica </a></td>
+			<td class=" text-right " id="pc">28500</td>
+            
+            <script>
+                var objeto = sessionStorage.asd.split(",")
+                var facc = objeto[4]
+                document.getElementById('pc').innerHTML= facc;
+            </script>
+			
+		</tr>
+		<tr>
+			<td style="text-align: center;">1</td>
+			<td><a href="#"> Operación </a></td>
+			<td class=" text-right " id="po">28500</td>
+            
+            <script>
+                var objeto = sessionStorage.asd.split(",")
+                var facc = objeto[5]
+                if (facc=="") {
+                    facc="0"
+                }
+                document.getElementById('po').innerHTML= facc;
+            </script>
+			
+		</tr>
+        <tr>
+			<td style="text-align: center;">1</td>
+			<td><a href="#"> Internado </a></td>
+			<td class=" text-right " id="pi">28500</td>
+            
+            <script>
+                var objeto = sessionStorage.asd.split(",")
+                var facc = objeto[6]
+                if (facc=="") {
+                    facc="0"
+                }
+                document.getElementById('pi').innerHTML= facc;
+            </script>
+			
+		</tr>
+		<tr >
+			<td colspan="2" style="text-align: right;">Total</td>
+			<td style="text-align: right;"><a href="#" id="tota"> 28500 </a></td>
+                
+                <script>
+                    var objeto = sessionStorage.asd.split(",")
+                    var facc = objeto[7]
+                    document.getElementById('tota').innerHTML= facc;
+                </script>
+                
+            
+			
+		</tr>
+	
+	</tbody>
+</table>
+<pre></pre>
+		
+
+	<div class="row">
+		<div class="panel panel-info"  >
+			<h6> "LA ALTERACI&Oacute;N, FALSIFICACI&Oacute;N O COMERCIALIZACI&Oacute;N ILEGAL DE ESTE DOCUMENTO ESTA PENADO POR LA LEY :v"</h6>
+		</div>
+			
+		
+	</div>
+		
+</div>
+</div>
+
+</head>
+
+<script>
+    var objeto = sessionStorage.asd.split(",")
+    //id factura alert(objeto[0])
+    //fecha alert(objeto[1])
+    //paciente alert(objeto[2])
+    //doctor alert(objeto[3])
+    //precio consulta alert(objeto[4])
+    //precio operacion alert(objeto[5])
+    //precio internado alert(objeto[6])
+    //precio total alert(objeto[7])
+    
+</script>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+
+<script>
+    let pdf = new jsPDF();
+    let section=$('all');
+    let page= function() {
+        pdf.save('pagename.pdf');
+       
+    };
+    pdf.addHTML(section,page);
+        
+    </script>
+
+<body>
+	
+</body>
+</html>

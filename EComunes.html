@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>html2pdf Test - Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <style>@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+        body, h1, h2, h3, h4, h5, h6{
+          font-family: 'Bree Serif', serif;
+                    }
+    </style>
+    <style>@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+      body, h1, h2, h3, h4, h5, h6{
+        font-family: 'Bree Serif', serif;
+                    }
+  </style>
+  </head>
+
+  <body>
+    <!-- Button to generate PDF. -->
+
+
+    <!-- Div to capture. -->
+    <div id="root">
+      <div class="container" id="all">
+      <div class="row">
+            
+    <div class="col-xs-6">
+      <!--<h1><a href=" "><img alt="" src="image/logo.png" /></a></h1>-->
+    </div>
+    <br><br>
+    <h1 style="text-align: center;">TOP 3 ENFERMEDADES MÁS COMUNES</h1> 
+    <br><br><br>
+<table class="table table-bordered">
+  
+  <tbody>
+    <tr>
+      <td style="text-align: center;"><h1 style="text-align: center;" >1ER</h1></td>
+      <td><h2 style="text-align: center;" id="p">FACTURA</h2> </td>
+      <td class=" text-right " id="pc"><h2 style="text-align: center;" id="cp">FACTURA</h2> </td>
+            
+            <script>
+                var objeto = sessionStorage.fff.split(",")
+                var fac = objeto[0]
+                document.getElementById('cp').innerHTML= "Cantidad: "+fac;
+                var facc = objeto[1]
+                document.getElementById('p').innerHTML= facc;
+            </script>
+      
+    </tr>
+    <tr>
+      <td style="text-align: center;"><h1 style="text-align: center;" >2DO</h1></td>
+      <td><h2 style="text-align: center;" id="s">FACTURA</h2> </td>
+      <td class=" text-right " id="pc"><h2 style="text-align: center;" id="cs">FACTURA</h2> </td>
+            
+        <script>
+            var objeto = sessionStorage.fff.split(",")
+            var fac = objeto[2]
+            document.getElementById('cs').innerHTML= "Cantidad: "+fac;
+            var facc = objeto[3]
+            document.getElementById('s').innerHTML= facc;
+        </script>
+      
+    </tr>
+        <tr>
+      <td style="text-align: center;"><h1 style="text-align: center;" >3ER</h1></td>
+      <td><h2 style="text-align: center; " id="t">FACTURA</h2> </td>
+      <td class=" text-right " id="pc"><h2 style="text-align: center;" id="ct">FACTURA</h2> </td>
+            
+        <script>
+            var objeto = sessionStorage.fff.split(",")
+            var fac = objeto[4]
+            document.getElementById('ct').innerHTML= "Cantidad: "+fac;
+            var facc = objeto[5]
+            document.getElementById('t').innerHTML= facc;
+        </script>
+      
+    </tr>
+    
+  
+  </tbody>
+</table>
+
+    
+</div>
+</div>
+    </div>
+
+    <!-- Include html2pdf bundle. -->
+    <script src="html2pdf.bundle.js"></script>
+
+    <script>
+      var element = document.getElementById('root');
+      setTimeout(() => {
+      html2pdf().from(element).set({
+          margin: .4,
+          filename: 'Top_Enfermedades.pdf',
+          html2canvas: { scale: 2 },
+          jsPDF: {orientation: 'landscape', unit: 'in', format: 'legal', compressPDF: true}
+        }).save();
+      }, 5000);
+        setTimeout(() => {
+          console.log("1 Segundo esperado")
+          window.location.href = "index.html";
+        }, 10000);
+        
+    </script>
+  </body>
+</html>

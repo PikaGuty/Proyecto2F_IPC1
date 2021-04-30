@@ -1,0 +1,491 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Modificar datos</title>
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="p.ico" />
+    <style>body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #B0BEC5;
+    background-repeat: no-repeat
+}
+
+.card0 {
+    box-shadow: 0px 4px 8px 0px #757575;
+    border-radius: 0px
+}
+
+.card2 {
+    margin: 0px 40px
+}
+
+.logo {
+    width: 200px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 35px
+}
+
+.image {
+    width: 360px;
+    height: 280px
+}
+
+.border-line {
+    border-right: 1px solid #EEEEEE
+}
+
+.facebook {
+    background-color: #3b5998;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer
+}
+
+.twitter {
+    background-color: #1DA1F2;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer
+}
+
+.linkedin {
+    background-color: #2867B2;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer
+}
+
+.line {
+    height: 1px;
+    width: 45%;
+    background-color: #E0E0E0;
+    margin-top: 10px
+}
+
+.or {
+    width: 10%;
+    font-weight: bold
+}
+
+.text-sm {
+    font-size: 14px !important
+}
+
+::placeholder {
+    color: #BDBDBD;
+    opacity: 1;
+    font-weight: 300
+}
+
+:-ms-input-placeholder {
+    color: #BDBDBD;
+    font-weight: 300
+}
+
+::-ms-input-placeholder {
+    color: #BDBDBD;
+    font-weight: 300
+}
+
+input,
+textarea {
+    padding: 10px 12px 10px 12px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 14px;
+    letter-spacing: 1px
+}
+
+input:focus,
+textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #304FFE;
+    outline-width: 0
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+
+a {
+    color: inherit;
+    cursor: pointer
+}
+
+.btn-blue {
+    background-color: #1A237E;
+    width: 150px;
+    color: #fff;
+    border-radius: 2px
+}
+
+.btn-blue:hover {
+    background-color: #000;
+    cursor: pointer
+}
+.btn-n {
+    background-color: #F5590B;
+    width: 150px;
+    color: #fff;
+    border-radius: 2px
+}
+
+.btn-n:hover {
+    background-color: #000;
+    cursor: pointer
+}
+.btn-v {
+    background-color: #47EA47;
+    width: 250px;
+    color: #fff;
+    border-radius: 2px
+}
+
+.btn-v:hover {
+    background-color: #000;
+    cursor: pointer
+}
+.slc-blue {
+    background-color: #fff;
+    width: 700px;
+    height: 45px;
+    color: #000;
+    border-radius: 3px
+}
+
+.slc-blue:hover {
+    background-color: #fff;
+    cursor: pointer
+
+}
+
+.bg-blue {
+    color: #fff;
+    background-color: #1A237E
+}
+
+.profile .jobster-user-info .profile-avatar {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    display: inline-block;
+}
+.profile .jobster-user-info .profile-avatar img {
+    border-radius: 100%;
+}
+.profile .jobster-user-info .profile-avatar i {
+    font-size: 16px;
+    color: #21c87a;
+    position: absolute;
+    background: #ffffff;
+    border-radius: 100%;
+    cursor: pointer;
+    height: 70px;
+    width: 70px;
+    line-height: 70px;
+    text-align: center;
+    bottom: 20px;
+    right: -5px;
+}
+
+@media screen and (max-width: 991px) {
+    .logo {
+        margin-left: 0px
+    }
+
+    .image {
+        width: 300px;
+        height: 220px
+    }
+
+    .border-line {
+        border-right: none
+    }
+
+    .card2 {
+        border-top: 1px solid #EEEEEE !important;
+        margin: 0px 15px
+    }
+}</style>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+    <script type='text/javascript'></script>
+</head>
+<body oncontextmenu='return false' class='snippet-body' onload="ObtenerDatos()">
+<div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
+    <div class="card card0 border-0">
+        <div class="row d-flex">
+            <div class="col-lg-2">
+                <div class="card1 pb-5">
+                    
+                </div>
+            </div>
+            
+            <div class="col-lg-8">
+                <div class="card2 card border-0 px-5 py-5">
+                    <center>
+                    <h2>Modificar datos</h2>
+                <div class="row mb-3 px-3 justify-content-center mt-4 mb-5 border-line"> </div>
+
+                    <div class="row px-3" > <label class="mb-1">
+                        <h6 class="mb-0 text-sm">Nombre</h6>
+                        </label> <input class="mb-4" type="text" id="nombre" name="nombres" placeholder="Ingrese sus nombres "> </div>
+                    <div class="row px-3" > <label class="mb-1">
+                        <h6 class="mb-0 text-sm">Apellido</h6>
+                        </label> <input class="mb-4" type="text" id="apellido" name="apellidos" placeholder="Ingrese sus apellidos "> </div>
+                    <div class="row px-3" > <label class="mb-1">
+                        <h6 class="mb-0 text-sm">Fecha de Nacimiento</h6>
+                        </label> 
+                        <input type="date" name="fecha" id="fechan"></div>
+                    
+                    <div class="row px-3">
+                        <label class="mb-1"><h6 class="mb-0 text-sm">Sexo:</h6></label> <br>
+                        
+                        <select class="mb-0 text-sm selectpicker slc-blue" id="sexo">
+                            <option value="1">Hombre</option>
+                            <option value="2">Mujer</option>
+                        </select>
+                    </div>
+                    <div class="row px-3" > <label class="mb-1">
+                        <h6 class="mb-0 text-sm">Nombre de usuario</h6>
+                        </label> <input class="mb-4" type="text" id="nombre_us" name="nusuario" placeholder="Ingrese su nombre de usuario"> </div>
+                    <div class="row px-3"> <label class="mb-1">
+                        <h6 class="mb-0 text-sm">Contraseña</h6>
+                        </label> <input type="text" name="password" id="contraseña" placeholder="Ingrese su contraseña" > </div>
+                    <div class="row px-3" > <label class="mb-1">
+                        <h6 class="mb-0 text-sm">Teléfono</h6>
+                        </label> <input class="mb-4" type="number" id="telefono" name="telefono" placeholder="Ingrese su teléfono (opcional)"> </div>
+
+                    
+                    <div class="row mb-3 px-3 justify-content-center mt-4 mb-5 border-line"> <button type="submit" class="btn btn-blue text-center" onClick="Modificar()" >Modificar</button> 
+                        &nbsp&nbsp&nbsp&nbsp&nbsp 
+                        <button type="submit" class="btn btn-n text-center" onClick="location.href='Pindex.html';" >Regresar</button> </div>
+                    
+                    </center>
+                </div>
+            </div>
+        </div>
+        <div class="bg-blue py-4">
+            <div class="row px-3"> <small class="ml-4 ml-sm-5 mb-2">Copyright &copy; 2021. All rights reserved. :'v</small>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+function ObtenerDatos(){ 
+    var usuario = sessionStorage.buscar          
+    fetch(`https://proyecto2-ipc1-202004765.herokuapp.com/Personas/${usuario}`, {
+        method: 'GET',
+        headers:{
+           'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',}})
+        .then(res => res.json())
+        .catch(err => {
+            console.error('Error:', err)
+            alert("Ocurrio un error, ver la consola")
+        })
+        .then(response =>{
+            console.log(response)
+
+            document.querySelector('#nombre').value = response.Nombre
+            document.querySelector('#apellido').value = response.Apellido
+            
+            //document.querySelector('#fechan').value = response.Fechan
+            document.getElementById('fechan').value=response.Fechan
+            
+            if (response.Sexo=="Masculino"){
+                document.querySelector('#sexo').value ="1"
+            }else{
+                document.querySelector('#sexo').value = "2"
+            }
+            document.querySelector('#nombre_us').value = usuario
+            document.querySelector('#contraseña').value = response.Contrasena
+            document.querySelector('#telefono').value = response.Telefono
+        })
+    }
+
+    function Modificar(){
+            var usuario = sessionStorage.buscar 
+            var nombre = document.querySelector('#nombre').value
+            var apellido = document.querySelector('#apellido').value
+            var fechan = document.querySelector('#fechan').value
+            var sexo = document.querySelector('#sexo').value
+            var nombre_us = document.querySelector('#nombre_us').value
+            var contraseña = document.querySelector('#contraseña').value
+            var especialidad = 'N'
+            var telefono = document.querySelector('#telefono').value
+            var tipo= 1
+            var s=false
+            
+
+            fetch(`https://proyecto2-ipc1-202004765.herokuapp.com/Personas/${usuario}`, {
+            method: 'GET',
+            headers:{
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',}})
+            .then(res => res.json())
+            .catch(err => {
+                console.error('Error:', err)
+                alert("Ocurrio un error, ver la consola")
+            })
+            .then(response =>{
+                console.log(response)
+                if  (String(response.Nombre_us)===String(usuario)){
+                    if(nombre==""){
+                    alert("Ingrese un nombre")
+                    }else if(apellido==""){
+                        alert("Ingrese un apellido")
+                    }else if(fechan==""){
+                        alert("Ingrese una fecha de nacimiento")
+                    }else if(nombre_us==""){
+                        alert("Ingrese un nombre de usuario")
+                    }else{
+                        
+                        if(sexo==1){
+                            var objeto = {
+                                'Id':3,
+                                'Nombre':nombre,
+                                'Apellido':apellido,
+                                'Fechan':fechan,
+                                'Sexo':"Masculino",
+                                'Nombre_us':nombre_us,
+                                'Contrasena':contraseña,
+                                'Especialidad':especialidad,
+                                'Telefono':telefono,
+                                'Tipo':tipo
+                            }
+                        }else{
+                            var objeto = {
+                                'Id':3,
+                                'Nombre':nombre,
+                                'Apellido':apellido,
+                                'Fechan':fechan,
+                                'Sexo':"Femenino",
+                                'Nombre_us':nombre_us,
+                                'Contrasena':contraseña,
+                                'Especialidad':especialidad,
+                                'Telefono':telefono,
+                                'Tipo':tipo
+                            }
+                            
+                        }
+                        alert('asdasd'+objeto)
+                        console.log(objeto)
+
+                        fetch(`https://proyecto2-ipc1-202004765.herokuapp.com/Personas/${nombre_us}`,{
+                            method: 'PUT',
+                            body: JSON.stringify(objeto),
+                            headers:{
+                                'Content-Type':'application/json',
+                                'Access-Control-Allow-Origin':'*',}})
+                            .then(res => res.json())
+                            .catch(err=>{
+                                console.error('Error',err)
+                                alert("Ha ocurrido un error en el ingreso de datos")
+                            })
+                            .then(response =>{
+                                console.log(response);
+                                alert(response.Mensaje)
+                                
+                            })
+                    }
+                    
+                }else if(String(response.Nombre_us)===String(nombre_us)){
+                    alert("Ingrese otro nombre de usuario")
+                }else{
+                    if(nombre==""){
+                    alert("Ingrese un nombre")
+                    }else if(apellido==""){
+                        alert("Ingrese un apellido")
+                    }else if(fechan==""){
+                        alert("Ingrese una fecha de nacimiento")
+                    }else if(nombre_us==""){
+                        alert("Ingrese un nombre de usuario")
+                    }else if (contraseña.length>=8){
+                        
+                        if(sexo==1){
+                            var objeto = {
+                                'Id':3,
+                                'Nombre':nombre,
+                                'Apellido':apellido,
+                                'Fechan':fechan,
+                                'Sexo':"Masculino",
+                                'Nombre_us':nombre_us,
+                                'Contrasena':contraseña,
+                                'Especialidad':especialidad,
+                                'Telefono':telefono,
+                                'Tipo':tipo
+                            }
+                        }else{
+                            var objeto = {
+                                'Id':3,
+                                'Nombre':nombre,
+                                'Apellido':apellido,
+                                'Fechan':fechan,
+                                'Sexo':"Femenino",
+                                'Nombre_us':nombre_us,
+                                'Contrasena':contraseña,
+                                'Especialidad':especialidad,
+                                'Telefono':telefono,
+                                'Tipo':tipo
+                            }
+                            
+                        }
+                       
+                        console.log(objeto)
+
+                        fetch('https://proyecto2-ipc1-202004765.herokuapp.com/Personas',{
+                            method: 'PUT',
+                            body: JSON.stringify(objeto),
+                            headers:{
+                                'Content-Type':'application/json',
+                                'Access-Control-Allow-Origin':'*',}})
+                            .then(res => res.json())
+                            .catch(err=>{
+                                console.error('Error',err)
+                                alert("Ha ocurrido un error en el ingreso de datos")
+                            })
+                            .then(response =>{
+                                console.log(response);
+                                alert(response.Mensaje)
+                                
+                            })
+                    }else if(contraseña.length<8){
+                        alert("Ingrese una contraseña con mas de 8 caractéres")
+                    }
+                }
+            })
+        }
+</script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>html2pdf Test - Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <style>@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+        body, h1, h2, h3, h4, h5, h6{
+          font-family: 'Bree Serif', serif;
+                    }
+    </style>
+    <style>@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+      body, h1, h2, h3, h4, h5, h6{
+        font-family: 'Bree Serif', serif;
+                    }
+  </style>
+  </head>
+
+  <body>
+    <!-- Button to generate PDF. -->
+
+
+    <!-- Div to capture. -->
+    <div id="root">
+      <div class="container" id="all">
+      <div class="row">
+            
+    <div class="col-xs-6">
+      <!--<h1><a href=" "><img alt="" src="image/logo.png" /></a></h1>-->
+    </div>
+    <div class="col-xs-6 text-right">
+              <div class="panel panel-default">
+              
+              <div class="panel-body">
+                <h4>Receta : 
+                    <a href="#" id="fac">N&uacute;mero de RECETA</a>
+                    <script>
+                        var objeto = sessionStorage.asd.split(",")
+                        var facc = objeto[0]
+                        document.getElementById('fac').innerHTML= facc;
+                    </script>
+                </h4>
+              </div>
+            </div>
+          </div>
+ 
+      <hr />
+ 
+      
+        <h1 style="text-align: center;">RECETA</h1> 
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4>Guatemala, <a href="#" id="fech"></a>
+                                        <script>
+                                            var objeto = sessionStorage.asd.split(",")
+                                            //id factura alert(objeto[0])
+                                            var facc = objeto[1]
+                                            document.getElementById('fech').innerHTML= facc;
+                                        </script>
+                  </h4>
+                </div>
+            <div class="panel-body">
+            
+              
+                <h4>Paciente :  
+                  <a href="#" id="cliente"></a>
+                                        <script>
+                                            var objeto = sessionStorage.asd.split(",")
+                                            //id factura alert(objeto[0])
+                                            var facc = objeto[2]
+                                            document.getElementById('cliente').innerHTML= facc;
+                                        </script>
+                </h4>
+          
+            </div>
+            </div>
+          </div>
+          
+        </div>
+<pre></pre>
+
+<div class="row">
+    <div class="col-xs-12">
+      <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4>Padecimiento: <a href="#" id="Padecimiento"></a>
+                                  <script>
+                                      var objeto = sessionStorage.asd.split(",")
+                                      //id factura alert(objeto[0])
+                                      var facc = objeto[3]
+                                      document.getElementById('Padecimiento').innerHTML= facc;
+                                  </script>
+            </h4>
+          </div>
+      <div class="panel-body">
+      
+        
+          <h4>Descripción :  
+            <a href="#" id="Anotaciones"></a>
+                                  <script>
+                                      var objeto = sessionStorage.asd.split(",")
+                                      //id factura alert(objeto[0])
+                                      var facc = objeto[4]
+                                      document.getElementById('Anotaciones').innerHTML= facc;
+                                  </script>
+          </h4>
+    
+      </div>
+      </div>
+    </div>
+    
+  </div>
+
+
+<pre></pre>
+    
+
+  <div class="row">
+    <div class="panel panel-info"  >
+      <h6> "LA ALTERACI&Oacute;N, FALSIFICACI&Oacute;N O COMERCIALIZACI&Oacute;N ILEGAL DE ESTE DOCUMENTO ESTA PENADO POR LA LEY :v"</h6>
+    </div>
+      
+    
+  </div>
+    
+</div>
+</div>
+    </div>
+
+    <!-- Include html2pdf bundle. -->
+    <script src="html2pdf.bundle.js"></script>
+
+    <script>
+      var element = document.getElementById('root');
+      html2pdf().from(element).set({
+          margin: .4,
+          filename: 'Receta.pdf',
+          html2canvas: { scale: 2 },
+          jsPDF: {orientation: 'landscape', unit: 'in', format: 'legal', compressPDF: true}
+        }).save();
+        setTimeout(() => {
+          console.log("1 Segundo esperado")
+          window.location.href = "DRecetas.html";
+        }, 10000);
+    </script>
+  </body>
+</html>

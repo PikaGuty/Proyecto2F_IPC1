@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Paciente</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="p.ico" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <style>
+        .btn-blue {
+    background-color: #1A237E;
+    width: 150px;
+    color: #fff;
+    border-radius: 2px
+}
+
+.btn-blue:hover {
+    background-color: #000;
+    cursor: pointer
+}
+    </style>
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="Pindex.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    
+                    <!--<i class="fas fa-laugh-wink"></i>-->
+                </div>
+                <!--<img src="soyadmin.jpg" alt="" width="50" height="50">-->
+                <div class="sidebar-brand-text mx-3">Paciente</sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="Pindex.html">
+                    <!--<i class="fas fa-fw fa-tachometer-alt"></i>-->
+                    <span>Inicio</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Opciones
+            </div>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="SolCita.html">
+                    <span>Solicitar Cita</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="EstadoCita.html">
+                    <span>Ver estado de cita</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="ComprarMedicina.html">
+                    <span>Comprar medicina</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+        </ul>
+
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="us" >usuario</span> 
+                                    <script>
+                                        var usuario = sessionStorage.buscar
+                                        document.getElementById('us').innerHTML= usuario;
+                                    </script>
+                                <img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="ModP.html">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Perfil
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Cerrar Sesión
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                
+                <script>
+                    window.onload = function(){
+                        var fecha = new Date(); //Fecha actual
+                        var mes = fecha.getMonth()+1; //obteniendo mes
+                        var dia = fecha.getDate(); //obteniendo dia
+                        var ano = fecha.getFullYear(); //obteniendo año
+                        if(dia<10)
+                            dia='0'+dia; //agrega cero si el menor de 10
+                        if(mes<10)
+                            mes='0'+mes //agrega cero si el menor de 10
+                        document.getElementById('fecha').min=ano+"-"+mes+"-"+dia;
+                    }
+                </script>
+
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Solicitar Cita</h1>
+                        
+                    </div>
+
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 mb-4">
+                            <div class="card shadow mb-4">
+                                
+                                <div class="row px-3" >
+                                <p>Fecha para su cita:<br>
+                                <input type="date" name="fecha" id="fecha" value="" min="" max="2030-12-31"></p></div>
+
+                                <p>Hora a la que desea ser atendido:<br>&nbsp <input type="time" id="hora" name="eta"> </p>
+
+                                <div class="row px-3" > <label class="mb-1">
+                                <p>Motivo de la cita:<br>
+                                </label> <textarea name="textarea" rows="10" id="motivo" cols="50" placeholder="Ingrese motivo de su cita"></textarea></p> </div>
+                                <div class="row mb-3 px-3 justify-content-center mt-4 mb-5 border-line"> <button type="submit" onclick="registro()" class="btn btn-blue text-center">Solicitar cita</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright © 2021. All rights reserved. :'v</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Quieres cerrar sesión?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Seleccona cancelar si no es así.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-primary" href="Login.html">Salir</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+
+
+
+    <script>
+        
+        function registro(){
+            var motivo = document.querySelector('#motivo').value
+            var hora = document.querySelector('#hora').value
+            var fecha = document.querySelector('#fecha').value
+            var fec = fecha.split("-");
+            fec = fec[2]+'-'+fec[1]+'-'+fec[0]
+            var nombre_us = sessionStorage.buscar
+            
+            
+            fetch(`https://proyecto2-ipc1-202004765.herokuapp.com/Citas/${nombre_us}`, {
+            method: 'GET',
+            headers:{
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',}})
+            .then(res => res.json())
+            .catch(err => {
+                var objeto = {
+                                'UsuarioP':nombre_us,
+                                'Fecha':fec,
+                                'Hora':hora,
+                                'Motivo':motivo,
+                                'Estado': 1,
+                                'IDoc':"No asignado",
+                                'Doctor':"No asignado"
+                            }
+                            
+                            console.log(objeto)
+
+                            fetch('https://proyecto2-ipc1-202004765.herokuapp.com/Citas',{
+                                method: 'POST',
+                                body: JSON.stringify(objeto),
+                                headers:{
+                                    'Content-Type':'application/json',
+                                    'Access-Control-Allow-Origin':'*',}})
+                                .then(res => res.json())
+                                .catch(err=>{
+                                    console.error('Error',err)
+                                    alert("Ha ocurrido un error en el ingreso de datos")
+                                })
+                                .then(response =>{
+                                    console.log(response);
+                                    alert(response.Mensaje)
+                                    
+                                })
+            })
+            .then(response =>{
+                alert(response.UsuarioP)
+                if  (String(response.UsuarioP)===String(nombre_us)){
+                    
+                    if(response.Estado==1){
+                        alert("No puede solicitar una nueva cita, ya que tiene una pendiente")
+                    }else if(response.Estado==2){
+                        alert("No puede solicitar una nueva cita, ya que tiene una aceptada, lo esperamos en su cita :)")
+                    }else{
+                        if(motivo==""){
+                        alert("Ingrese un motivo para su cita")
+                        }else if(hora==""){
+                            alert("Ingrese la hora a la que solicitará su cita")
+                        }else if(fecha==""){
+                            alert("Ingrese la fecha a la que solicitará su cita")
+                        }else{
+                            var objeto = {
+                                'UsuarioP':nombre_us,
+                                'Fecha':fec,
+                                'Hora':hora,
+                                'Motivo':motivo,
+                                'Estado': 1,
+                                'IDoc':"No asignado",
+                                'Doctor':"No asignado"
+                            }
+                            
+                            console.log(objeto)
+
+                            fetch('https://proyecto2-ipc1-202004765.herokuapp.com/Citas',{
+                                method: 'POST',
+                                body: JSON.stringify(objeto),
+                                headers:{
+                                    'Content-Type':'application/json',
+                                    'Access-Control-Allow-Origin':'*',}})
+                                .then(res => res.json())
+                                .catch(err=>{
+                                    console.error('Error',err)
+                                    alert("Ha ocurrido un error en el ingreso de datos")
+                                })
+                                .then(response =>{
+                                    console.log(response);
+                                    alert(response.Mensaje)
+                                    
+                                })
+                        }
+                    }
+                }
+            })
+        }
+    </script>
+
+</body>
+
+</html>
